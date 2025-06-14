@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant user
+    participant browser
+    participant server
+
+    user->>browser: Digita nota e clica em "save"
+
+    browser->>server: POST /exampleapp/new_note_spa (JSON com a nova nota)
+    activate server
+    server-->>browser: Confirmação ou nova lista de notas
+    deactivate server

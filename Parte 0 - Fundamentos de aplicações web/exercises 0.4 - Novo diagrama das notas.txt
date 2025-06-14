@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant user
+    participant browser
+    participant server
+
+    user->>browser: Escreve uma nova nota no campo de texto
+    user->>browser: Clica no botão "submit"
+    
+    activate browser
+    browser->>server: POST /exampleapp/notes (com conteúdo da nota em JSON)
+    activate server
+    server-->>browser: Resposta HTTP (ex: redirect ou reload da página)
+    deactivate server
+    
+    browser->>server: GET /exampleapp/notes
+    activate server
+    server-->>browser: HTML atualizado com a nova nota
+    deactivate server
+    deactivate browser

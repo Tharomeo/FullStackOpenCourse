@@ -1,0 +1,3 @@
+Revise os conceitos básicos de CSS lendo esse tutorial do Mozilla: CSS tutorial.
+
+Este exercício não é enviado ao GitHub. Ler o tutorial já é suficiente.
